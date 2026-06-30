@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Encanto</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFF7F3;
+        }
+
+        header {
+            background-color: #F8BBD9;
+            color: #7A3E5A;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        article {
+            display: flex;
+            gap: 20px;
+            background-color: #FFFCE8;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #E66A8A;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #5F7FBF;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            background-color: #B8E3FF;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #9ED8FF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍰 Doce Encanto</h1>
+        <p>Receitas de sobremesas, bolos, doces e muitas delícias!</p>
+    </header>
+
+    <main>
+
+        <article>
+
+            <img src="bolo-morango.png"
+                alt="Bolo decorado com morangos e chantilly">
+
+            <div>
+
+                <h2>Bolo de Morango com Chantilly</h2>
+
+                <p class="artigo-autor">
+                    Por: Marcelo Paludetto
+                </p>
+
+                <p>
+                    Aprenda a preparar um delicioso bolo de morango com massa fofinha,
+                    chantilly cremoso e muito sabor.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>🍰 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+        <article>
+
+            <img src="cupcake.png"
+                alt="Cupcakes coloridos decorados com cobertura">
+
+            <div>
+
+                <h2>Cupcakes Coloridos</h2>
+
+                <p class="artigo-autor">
+                    Por: Marcelo Paludetto
+                </p>
+
+                <p>
+                    Cupcakes fofinhos com cobertura de buttercream em tons pastéis,
+                    perfeitos para festas e aniversários.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>🧁 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <script>
+
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", function () {
+
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
